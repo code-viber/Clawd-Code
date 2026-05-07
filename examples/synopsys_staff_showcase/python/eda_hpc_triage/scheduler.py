@@ -87,8 +87,14 @@ class RendezvousScheduler:
     def assign(self, signature_id: str, category: str) -> WorkerNode:
         """Assign a signature to the best worker."""
 
+        candidates = tuple(
+            worker for worker in self.workers if category in worker.specialty
+        )
+        if not candidates:
+            candidates = self.workers
+
         return max(
-            self.workers,
+            candidates,
             key=lambda worker: _weighted_score(signature_id, category, worker),
         )
 
