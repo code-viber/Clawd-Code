@@ -1,0 +1,22 @@
+{
+  "workers": [
+    {
+      "id": "cec-crash-debug-us",
+      "region": "us-west",
+      "capacity": 4,
+      "specialty": ["tool-crash", "design-database"]
+    },
+    {
+      "id": "cec-timing-signoff",
+      "region": "us-west",
+      "capacity": 3,
+      "specialty": ["timing-closure"]
+    },
+    {
+      "id": "cec-infra-follow-sun",
+      "region": "global",
+      "capacity": 5,
+      "specialty": ["license-infra", "storage-io"]
+    }
+  ]
+}
